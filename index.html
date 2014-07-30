@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Gallery</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div class="container clearfix">
+    
+    <h1>Top 5 T.O.</h1>
+
+    <div class="gallery">
+      <div class="previews">
+          <a href="#" class="selected" data-full="images/bars/top1large.jpg"><img src="images/bars/top1small.jpg" /></a>
+          <a href="#" data-full="images/bars/top2large.jpg"><img src="images/bars/top2small.jpg" /></a>
+          <a href="#" data-full="images/bars/top3large.jpg"><img src="images/bars/top3small.jpg" /></a>
+          <a href="#" data-full="images/bars/top4large.jpg"><img src="images/bars/top4small.jpg" /></a>
+          <a href="#" data-full="images/bars/top5large.jpg"><img src="images/bars/top5small.jpg" /></a>
+      </div> <!--end of preview div-->
+
+      <div class="full">
+          <!-- first image is viewable to start -->
+          <img src="images/bars/top1large.jpg" />
+      </div><!--end of full div-->
+
+      <div class="description">
+        <h2>Czehoski</h2>
+        <p>Czehoski's rooftop patio is one to fill up fast, meaning the determined patio-seekers should head straight up to its second floor (and bypass the provocative art displayed on Czehoski's walls). This patio is pretty well enclosed with a shingled wall border and wood beam frame, so a breeze can sometimes be hard to come by. Nevertheless, the mood up top is pretty laid-back and relaxed, with a wall of bench seating, a spattering of patio umbrellas, and cold beers all around.</p>
+        <a href="#">Website</a>
+        <a href="#">Map</a>
+        <a href="#">Phone</a>
+    </div><!--end of description div-->
+    </div><!--end of gallery div-->
+
+
+  
+  </div><!--end of container div-->
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+  <script>
+    $(function() {
+      $('.preview a').on('click',function(e){
+        var src = $(this).data('src');
+        $('img.previewFull').attr('src',src);
+
+      });
+    });
+  </script>
+</body>
+</html>
