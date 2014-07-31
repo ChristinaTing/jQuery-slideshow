@@ -21,11 +21,11 @@
 
     <div class="gallery">
       <div class="previews">
-        <a href="#" data-full="images/bars/top1large.jpg"><img src="images/bars/top1small.jpg" /></a>
-        <a href="#" data-full="images/bars/top2large.jpg"><img src="images/bars/top2small.jpg" /></a>
-        <a href="#" data-full="images/bars/top3large.jpg"><img src="images/bars/top3small.jpg" /></a>
-        <a href="#" data-full="images/bars/top4large.jpg"><img src="images/bars/top4small.jpg" /></a>
-        <a href="#" data-full="images/bars/top5large.jpg"><img src="images/bars/top5small.jpg" /></a>
+        <a href="#" data-bar="czehoski" data-full="images/bars/top1large.jpg"><img src="images/bars/top1small.jpg" /></a>
+        <a href="#" data-bar="gladstone" data-full="images/bars/top2large.jpg"><img src="images/bars/top2small.jpg" /></a>
+        <a href="#" data-bar = "drake" data-full="images/bars/top3large.jpg"><img src="images/bars/top3small.jpg" /></a>
+        <a href="#" data-bar = "gusto" data-full="images/bars/top4large.jpg"><img src="images/bars/top4small.jpg" /></a>
+        <a href="#" data-bar = "squirly" data-full="images/bars/top5large.jpg"><img src="images/bars/top5small.jpg" /></a>
       </div> <!--end of preview div-->
 
       <div class="full">
@@ -34,16 +34,33 @@
 
       </div><!--end of full div-->
 
-      <div class="description">
+      <div class="description description-czehoski">
         <h3>Czehoski</h3>
         <p>Czehoski's rooftop patio is one to fill up fast, meaning the determined patio-seekers should head straight up to its second floor (and bypass the provocative art displayed on Czehoski's walls). This patio is pretty well enclosed with a shingled wall border and wood beam frame, so a breeze can sometimes be hard to come by. Nevertheless, the mood up top is pretty laid-back and relaxed, with a wall of bench seating, a spattering of patio umbrellas, and cold beers all around.</p>
 
       </div>
 
-      <div class="description">
+      <div class="description description-gladstone">
         <h3>The Drake</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dicta quod voluptatem omnis velit ex ullam, ducimus iure itaque reprehenderit commodi, earum atque voluptas quam. Esse alias consectetur rerum provident.</p>
       </div>
+
+      <div class="description description-drake">
+        <h3>The Gladstone</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dicta quod voluptatem omnis velit ex ullam, ducimus iure itaque reprehenderit commodi, earum atque voluptas quam. Esse alias consectetur rerum provident.</p>
+      </div>
+
+       <div class="description description-gusto">
+        <h3>Gusto 101</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dicta quod voluptatem omnis velit ex ullam, ducimus iure itaque reprehenderit commodi, earum atque voluptas quam. Esse alias consectetur rerum provident.</p>
+      </div>
+
+      <div class="description description-squirly">
+        <h3>Squirly's</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dicta quod voluptatem omnis velit ex ullam, ducimus iure itaque reprehenderit commodi, earum atque voluptas quam. Esse alias consectetur rerum provident.</p>
+      </div>
+
+
     </div><!--end of gallery div-->
     
     <div class="sidebar">
@@ -85,6 +102,10 @@
       $('.full a').attr('href', largeImage);
       $('.previews a').removeClass();
       $(this).addClass('selected');
+
+      var bar = $(this).attr("data-bar");
+      $('.description').hide();
+      $('.description-' + bar).show();
     });
 
     $('#fancy').fancybox();

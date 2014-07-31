@@ -170,7 +170,8 @@ h2 {
     border: 2px solid green; }
   .gallery .description {
     float: right;
-    width: 80%; }
+    width: 80%;
+    display: none; }
 
 .sidebar {
   width: 25%;

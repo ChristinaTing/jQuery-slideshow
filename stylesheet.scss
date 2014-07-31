@@ -61,9 +61,12 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
         border: 2px solid green;
 
     }
+
+
     .description{
     	float: right;
     	width: 80%;
+        display: none;
     }
 
  }
