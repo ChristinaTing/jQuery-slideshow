@@ -160,10 +160,14 @@ h2 {
     float: left;
     width: 20%; }
     .gallery .previews a {
-      display: inline-block;
-      margin: 0px 10px 10px 15px; }
+      display: inline-block; }
+      .gallery .previews a img {
+        border: 2px solid grey; }
+    .gallery .previews .selected img {
+      border: 5px solid orange; }
   .gallery .full img {
-    width: 80%; }
+    width: 80%;
+    border: 2px solid green; }
   .gallery .description {
     float: right;
     width: 80%; }
