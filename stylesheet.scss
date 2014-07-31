@@ -45,12 +45,20 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  		width: 20%;
  		a {
  			display: inline-block;
- 			margin: 0px 10px 10px 15px;
+ 			// margin: 0px 10px 10px 15px;
+            img {
+                border: 2px solid grey;
+            }
  		}
+.selected img {
+    border: 5px solid orange;
+}
+
     }
 
     .full img {
     	width: 80%;
+        border: 2px solid green;
 
     }
     .description{

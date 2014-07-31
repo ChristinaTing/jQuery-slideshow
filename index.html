@@ -4,6 +4,7 @@
   <title>jQuery Gallery</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
 </head>
 <body>
   <div class="container clearfix">
@@ -20,7 +21,7 @@
 
     <div class="gallery">
       <div class="previews">
-          <a href="#" class="selected" data-full="images/bars/top1large.jpg"><img src="images/bars/top1small.jpg" /></a>
+          <a href="#" data-full="images/bars/top1large.jpg"><img src="images/bars/top1small.jpg" /></a>
           <a href="#" data-full="images/bars/top2large.jpg"><img src="images/bars/top2small.jpg" /></a>
           <a href="#" data-full="images/bars/top3large.jpg"><img src="images/bars/top3small.jpg" /></a>
           <a href="#" data-full="images/bars/top4large.jpg"><img src="images/bars/top4small.jpg" /></a>
@@ -29,13 +30,19 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <img src="images/bars/top1large.jpg" />
+          <a><img src="images/bars/top1large.jpg" /></a>
       </div><!--end of full div-->
 
       <div class="description">
         <h3>Czehoski</h3>
         <p>Czehoski's rooftop patio is one to fill up fast, meaning the determined patio-seekers should head straight up to its second floor (and bypass the provocative art displayed on Czehoski's walls). This patio is pretty well enclosed with a shingled wall border and wood beam frame, so a breeze can sometimes be hard to come by. Nevertheless, the mood up top is pretty laid-back and relaxed, with a wall of bench seating, a spattering of patio umbrellas, and cold beers all around.</p>
-      </div><!--end of description div-->   
+
+      </div>
+
+      <div class="description">
+        <h3>The Drake</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dicta quod voluptatem omnis velit ex ullam, ducimus iure itaque reprehenderit commodi, earum atque voluptas quam. Esse alias consectetur rerum provident.</p>
+      </div>
     </div><!--end of gallery div-->
     
     <div class="sidebar">
@@ -61,14 +68,32 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+
   <script>
-    $(function() {
-      $('.preview a').on('click',function(e){
-        var src = $(this).data('src');
-        $('img.previewFull').attr('src',src);
+   $(document).ready(function(){
+
+    //   $('.previews').fadeIn('slow');
+    // });
+    // when you click on the thumbnail, remove the default action which would be to link externall
+
+      $('.previews a').on('click', function(e){
+        e.preventDefault();
+
+    // when you click on thumbnail, store the information 'full' (which is the big picture) into this variable
+      var largeImage=$(this).data('full');
+        $('.previews a').on('click', function(){
+          $('.full img').attr('src', largeImage);
+      });
+  
+        $('.previews a').on('click', function(){
+            $('.previews a').removeClass();
+            $(this).addClass('selected');
+        });
+
+
 
       });
-    });
+   });
   </script>
 </body>
 </html>
