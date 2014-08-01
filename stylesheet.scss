@@ -97,17 +97,14 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  
 
  .sidebar {
- 	width: 25%;
  	float: left;
-    a {
-        display: block;
-        padding: 20px;
-        text-decoration: none;
-        svg{
-            fill: #F12772;
-        }
+    width: 25%;
+    svg{
+        fill: #fff;
+        margin-left: 20px;
+        margin-top: 110px;
     }
-}
+ }
 
 
 
