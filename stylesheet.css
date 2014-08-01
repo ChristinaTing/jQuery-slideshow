@@ -194,8 +194,10 @@ h2 {
 
 .sidebar {
   float: left;
-  width: 25%; }
+  width: 25%;
+  padding-left: 30px;
+  position: relative; }
   .sidebar svg {
     fill: #fff;
-    margin-left: 20px;
-    margin-top: 110px; }
+    position: absolute;
+    top: -40px; }
