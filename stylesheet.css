@@ -195,9 +195,8 @@ h2 {
 .sidebar {
   float: left;
   width: 25%;
-  padding-left: 30px;
-  position: relative; }
+  padding: 13.25% 0 0 3%; }
   .sidebar svg {
     fill: #fff;
-    position: absolute;
-    top: -40px; }
+    position: relative;
+    width: 90%; }
