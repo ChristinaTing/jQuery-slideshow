@@ -133,24 +133,44 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   height: 0;
   clear: both; }
 
+@font-face {
+  font-family: 'ostrich_sansbold';
+  src: url("fonts/ostrich-bold-webfont.eot");
+  src: url("fonts/ostrich-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ostrich-bold-webfont.woff") format("woff"), url("fonts/ostrich-bold-webfont.ttf") format("truetype"), url("fonts/ostrich-bold-webfont.svg#ostrich_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ostrich_sanscondensed_light';
+  src: url("fonts/ostrich-light-webfont.eot");
+  src: url("fonts/ostrich-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ostrich-light-webfont.woff") format("woff"), url("fonts/ostrich-light-webfont.ttf") format("truetype"), url("fonts/ostrich-light-webfont.svg#ostrich_sanscondensed_light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ostrich_sans_dashedmedium';
+  src: url("fonts/ostrich-dashed-webfont.eot");
+  src: url("fonts/ostrich-dashed-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ostrich-dashed-webfont.woff") format("woff"), url("fonts/ostrich-dashed-webfont.ttf") format("truetype"), url("fonts/ostrich-dashed-webfont.svg#ostrich_sans_dashedmedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
-  font-family: 'Lato', sans-serif;
-  background: #333;
+  font-family: 'ostrich_sansbold';
+  background: url(images/chalkboard.jpg);
   color: #fff; }
 
 h1 {
+  font-family: 'ostrich_sanscondensed_light';
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   margin: 0;
-  padding: 0; }
+  padding-top: 35px;
+  font-size: 70px; }
 
 h2 {
   text-align: center;
   font-weight: 400; }
 
 .container {
-  background-color: #333;
+  background: url(images/chalkboard.jpg);
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -163,7 +183,12 @@ h2 {
     .gallery .previews a {
       display: inline-block; }
     .gallery .previews img {
-      border: 4px solid #eee; }
+      border: 4px solid #eee;
+      opacity: 1;
+      -webkit-transition: opacity 0.25s;
+      margin-bottom: 10px; }
+    .gallery .previews img:hover {
+      opacity: 0.5; }
   .gallery .selected img {
     border: 4px solid #F12772; }
 
@@ -174,6 +199,11 @@ h2 {
   .full img {
     width: 100%;
     border: 4px solid #eee; }
+  .full a {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s; }
+  .full a:hover {
+    opacity: 0.5; }
   .full .overlay {
     position: absolute;
     bottom: 7px;
@@ -200,3 +230,26 @@ h2 {
     fill: #fff;
     position: relative;
     width: 90%; }
+
+@-webkit-keyframes change {
+  0% {
+    fill: orange; }
+
+  25% {
+    fill: #FF0066; }
+
+  50% {
+    fill: #990099; }
+
+  100% {
+    fill: orange; } }
+.tower {
+  fill: orange;
+  -webkit-animation: change 5s linear infinite; }
+
+.description p {
+  font-family: 'Nixie One', cursive;
+  font-size: 18px; }
+.description h3 {
+  font-family: 'ostrich_sans_dashedmedium';
+  font-size: 40px; }
